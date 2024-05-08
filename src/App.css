@@ -1,0 +1,63 @@
+/* App.css */
+
+/* Navbar styles */
+#root {
+  background-image: url(images/root.jpg);
+  background-size: 100vw 100vh; /* Adjusted to cover the entire viewport */
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: backgroundAnimation 3s ease-in-out; /* Apply animation to root background */
+}
+
+/* 
+/* Main content styles */
+.main-section {
+  height: calc(100vh - 60px); /* Adjust for navbar height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add reload animation */
+@keyframes reloadAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Zoom in and out animation for background */
+@keyframes backgroundAnimation {
+  0% {
+    background-size: 100vw 100vh;
+  }
+  50% {
+    background-size: 110vw 110vh;
+  }
+  100% {
+    background-size: 100vw 100vh;
+  }
+}
+
+.content {
+  text-align: center;
+  color: rgb(13, 7, 1);
+  animation: reloadAnimation 2s cubic-bezier(0.42, 0, 0.58, 1) forwards; /* Apply animation to content */
+}
+
+.content h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1.5em;
+}
